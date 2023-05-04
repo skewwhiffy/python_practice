@@ -1,7 +1,11 @@
+from flask import jsonify
 from app import app
+
+incomes = [
+    {'description': 'salary', 'amount': 5000}
+]
 
 
 @app.route('/')
-@app.route('/index')
 def index():
-    return 'Hello, World!'
+    return jsonify(incomes)
